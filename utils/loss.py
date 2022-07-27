@@ -230,10 +230,12 @@ class QFocalLoss(nn.Module):
 
 class ComputeLoss:
     # Compute losses
-    def __init__(self, model, autobalance=False):
+    def __init__(self, model, loss_category, autobalance=False):
         self.sort_obj_iou = False
+        self.loss_category = loss_category
         device = next(model.parameters()).device  # get model device
         h = model.hyp  # hyperparameters
+        print('🚀🚀🚀🚀🚀🚀🚀🚀使用的损失函数是：' + loss_category)
 
         # Define criteria
         BCEcls = nn.BCEWithLogitsLoss(pos_weight=torch.tensor([h['cls_pw']], device=device))
@@ -275,7 +277,15 @@ class ComputeLoss:
                 pxy = pxy.sigmoid() * 2 - 0.5
                 pwh = (pwh.sigmoid() * 2) ** 2 * anchors[i]
                 pbox = torch.cat((pxy, pwh), 1)  # predicted box
-                iou = bbox_iou(pbox, tbox[i], CIoU=True).squeeze()  # iou(prediction, target)
+                if self.loss_category == 'CIoU':
+                    iou = bbox_iou(pbox, tbox[i], CIoU=True).squeeze()
+                elif self.loss_category == 'EIoU':
+                    iou = bbox_iou(pbox, tbox[i], EIoU=True).squeeze()
+                elif self.loss_category == 'GIoU':
+                    iou = bbox_iou(pbox, tbox[i], GIoU=True).squeeze()
+                elif self.loss_category == 'DIoU':
+                    iou = bbox_iou(pbox, tbox[i], DIoU=True).squeeze()
+                # iou = bbox_iou(pbox, tbox[i], CIoU=True).squeeze()  # iou(prediction, target)
                 if self.g2 > 0:  # Focal-EIOU https://arxiv.org/abs/2101.08158
                     lbox += ((bbox_iou(pbox.T, tbox[i], x1y1x2y2=False) ** self.g2) * (1 - iou)).mean()
                 else:
