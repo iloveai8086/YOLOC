@@ -1,8 +1,8 @@
-## awesome-yolo
+## awesome-yolo🎈🎈🎈
 
 <div align=“center”>
 
-🚀🚀🚀**yolo系列v3、v4、v5、v6、v7、x、r**以及其他改进的网络结构汇总。将 yolo 的backbone、neck、head等结构 扩展为许多其他视觉中的优秀结构
+🚀**yolo系列v3、v4、v5、v6、v7、x、r**以及其他改进的网络结构
 
 #### awesome-yolo中支持的模块有：
 
@@ -18,11 +18,12 @@
 - [x] 包含改进的transformer系列的backbone、neck、head；
 - [x] 包含Attention系列的backbone、neck、head；
 - [x] 包含基于anchor-free和anchor-based的检测器；
-- [x] train文件支持自定义loss参数；
+- [x] train文件支持自定义loss参数；  
 ...
 ...
 
 > 更新中
+______________________________________________________________________
 
 ## 🛠️ Usage
 
@@ -40,9 +41,76 @@
   # run
   python train.py
   ```
+______________________________________________________________________
+
+## 🍋 网络模型架构图
+
+### YOLOv7🚀🎈
+
+<img src='docs/image/yolov7_model.jpg'>
+
+[🔗参考链接](https://mp.weixin.qq.com/s/VEcUIaDrhc1ETIPr39l4rg)
+______________________________________________________________________
+
+### YOLOv6🚀🎈
+
+<img src='docs/image/yolov6_model.jpg'>
+
+[🔗参考链接](https://mp.weixin.qq.com/s/DFSROue8InARk-96I_Kptg)
+
+______________________________________________________________________
+
+### YOLOX🚀🎈
+
+<img src='docs/image/yolox_model.png'>
+
+[🔗参考链接](https://blog.csdn.net/qq_37541097/article/details/125132817)
+
+______________________________________________________________________
+
+### YOLOv5🚀🎈
+
+<img src='docs/image/yolov5_model.jpg'>
+
+[🔗参考链接](https://blog.csdn.net/qq_37541097/article/details/123594351)
+
+______________________________________________________________________
+
+### YOLOR🚀🎈
+
+<img src='docs/image/yolor_model.jpg'>
+
+[🔗参考链接](https://zhuanlan.zhihu.com/p/524548477)
+
+______________________________________________________________________
+
+### Scaled_YOLOv4🚀🎈
+
+<img src='docs/image/scaled_yolov4.png'>
+
+[🔗参考链接](https://arxiv.org/abs/2011.08036)
+
+______________________________________________________________________
+
+### YOLOv4🚀🎈
+
+<img src='docs/image/yolov4_model.png'>
+
+[🔗参考链接](https://blog.csdn.net/qq_37541097/article/details/123229946)
+
+______________________________________________________________________
+
+### YOLOv3🚀🎈
+
+<img src='docs/image/yolov3_model.jpg'>
+
+[🔗参考链接](https://zhuanlan.zhihu.com/p/143747206)
+
+______________________________________________________________________
 
 ## 🍉 Documentation
 [model配置yaml文件](docs/model.md)
+______________________________________________________________________
 
 ## 🎓 Acknowledgement
 
@@ -59,5 +127,11 @@
 * [yolox](https://github.com/Megvii-BaseDetection/YOLOX)
 * [yolou](https://github.com/jizhishutong/YOLOU)
 * [attention](https://github.com/xmu-xiaoma666/External-Attention-pytorch)
-
 </details>
+
+______________________________________________________________________
+
+## 🌰 Statement
+<details><summary> <b>Expand</b> </summary>
+
+* The content of this site is only for sharing notes. If some content is infringing, please use issue to contact to delete it
