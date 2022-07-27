@@ -18,6 +18,7 @@
 - [x] 包含改进的transformer系列的backbone、neck、head；
 - [x] 包含Attention系列的backbone、neck、head；
 - [x] 包含基于anchor-free和anchor-based的检测器；
+- [x] train文件支持自定义loss参数；
 ...
 ...
 
