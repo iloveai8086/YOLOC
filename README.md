@@ -51,8 +51,8 @@ ______________________________________________________________________
 * [yolor](https://github.com/Him-wen/awesome-yolo#yolor)
 * [scaled_yolov4](https://github.com/Him-wen/awesome-yolo#scaled_yolov4)
 * [yolov4](https://github.com/Him-wen/awesome-yolo#yolov4)
-* [yolov3](https://github.com/Him-wen/awesome-yolo#yolov3)
-
+* [yolov3](https://github.com/Him-wen/awesome-yolo#yolov3)  
+更新...
 
 ### YOLOv7🚀🎈
 
