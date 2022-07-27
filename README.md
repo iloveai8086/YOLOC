@@ -57,5 +57,6 @@
 * [yolor](https://github.com/WongKinYiu/yolor)
 * [yolox](https://github.com/Megvii-BaseDetection/YOLOX)
 * [yolou](https://github.com/jizhishutong/YOLOU)
+* [attention](https://github.com/xmu-xiaoma666/External-Attention-pytorch)
 
 </details>
