@@ -144,7 +144,7 @@ ______________________________________________________________________
 <img src='docs/image/yolov3_model.jpg'>
 
 以上网络模型结构图来自以下参考链接🔗
-[链接1](https://mp.weixin.qq.com/s/VEcUIaDrhc1ETIPr39l4rg)  [链接2](https://mp.weixin.qq.com/s/DFSROue8InARk-96I_Kptg)  [链接3](https://blog.csdn.net/qq_37541097/article/details/125132817)  [链接4](https://blog.csdn.net/qq_37541097/article/details/123594351)  [链接5](https://zhuanlan.zhihu.com/p/524548477)  [链接6](https://arxiv.org/abs/2011.08036)  [链接7](https://blog.csdn.net/qq_37541097/article/details/123229946)  [链接8](https://zhuanlan.zhihu.com/p/143747206)
+[链接1](https://zhuanlan.zhihu.com/p/543686792)  [链接2](https://mp.weixin.qq.com/s/DFSROue8InARk-96I_Kptg)  [链接3](https://blog.csdn.net/qq_37541097/article/details/125132817)  [链接4](https://blog.csdn.net/qq_37541097/article/details/123594351)  [链接5](https://zhuanlan.zhihu.com/p/524548477)  [链接6](https://arxiv.org/abs/2011.08036)  [链接7](https://blog.csdn.net/qq_37541097/article/details/123229946)  [链接8](https://zhuanlan.zhihu.com/p/143747206)
 
 ______________________________________________________________________
 
