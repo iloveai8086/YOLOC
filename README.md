@@ -44,6 +44,15 @@ ______________________________________________________________________
 ______________________________________________________________________
 
 ## 🍋 网络模型架构图
+* [yolov7](https://github.com/Him-wen/awesome-yolo#yolov7)
+* [yolov6](https://github.com/Him-wen/awesome-yolo#yolov7)
+* [yolox](https://github.com/Him-wen/awesome-yolo#yolox)
+* [yolov5](https://github.com/Him-wen/awesome-yolo#yolov5)
+* [yolor](https://github.com/Him-wen/awesome-yolo#yolor)
+* [scaled_yolov4](https://github.com/Him-wen/awesome-yolo#scaled_yolov4)
+* [yolov4](https://github.com/Him-wen/awesome-yolo#yolov4)
+* [yolov3](https://github.com/Him-wen/awesome-yolo#yolov3)
+
 
 ### YOLOv7🚀🎈
 
