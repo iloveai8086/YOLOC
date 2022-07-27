@@ -574,13 +574,15 @@ def train(hyp, opt, device, callbacks):  # hyp is path/to/hyp.yaml or hyp dictio
 
 def parse_opt(known=False):
     parser = argparse.ArgumentParser()
+    # Loss
+    parser.add_argument('--loss_category', default='CIoU', help='Use different loss functions') 
     parser.add_argument('--mode', type=str, default='yolo', help='yolo   :[yolov3, yolov4, scaled_yolov4, yolov5, yolor, yolov5-lite]'
                                                                   'yolov7 :[yolov7, ]'
                                                                   'yolox  :[yolox, yolox-lite]'
                                                                   'yolov6  :[yolov6, ]')
     parser.add_argument('--use_aux', type=bool, default=False, help='ues aux loss or not')
     parser.add_argument('--weights', type=str, default=ROOT / 'weights/yolov5s.pt', help='initial weights path')
-    parser.add_argument('--cfg', type=str, default=ROOT / 'models/yolov5/yolov5s.yaml', help='model.yaml path')
+    parser.add_argument('--cfg', type=str, default=ROOT / 'configs/yolov5/yolov5s.yaml', help='model.yaml path')
     parser.add_argument('--data', type=str, default=ROOT / 'data/coco128.yaml', help='dataset.yaml path')
     parser.add_argument('--hyp', type=str, default=ROOT / 'data/hyps/hyp.scratch.yaml', help='hyperparameters path')
     parser.add_argument('--epochs', type=int, default=2)
@@ -613,8 +615,6 @@ def parse_opt(known=False):
     parser.add_argument('--save-period', type=int, default=-1, help='Save checkpoint every x epochs (disabled if < 1)')
     parser.add_argument('--local_rank', type=int, default=-1, help='Automatic DDP Multi-GPU argument, do not modify')
 
-    # Loss
-    parser.add_argument('--loss_category', default='CIoU', help='Use different loss functions') 
     # Weights & Biases arguments
     parser.add_argument('--entity', default=None, help='W&B: Entity')
     parser.add_argument('--upload_dataset', nargs='?', const=True, default=False, help='W&B: Upload data, "val" option')
