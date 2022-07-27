@@ -31,6 +31,7 @@ from utils.torch_utils import copy_attr, time_sync
 # attention block
 from models.attention.CA import CoordAtt
 from models.attention.CBAM import CBAM
+from models.attentions.BAM import BAM
 
 class ReOrg(nn.Module):
     def __init__(self):
