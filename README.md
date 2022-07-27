@@ -17,31 +17,41 @@
 - [x] 包含transformer架构的backbone、neck、head；
 - [x] 包含改进的transformer系列的backbone、neck、head；
 - [x] 包含Attention系列的backbone、neck、head；
-- [x] 包含基于anchor-free和anchor-based的检测器；
-- [x] train文件支持自定义loss参数；  
+- [x] 包含基于anchor-free和anchor-based的检测器；  
 ...
 ...
-
 > 更新中
+
+## 🚀 可选择的组合
+#### 🌟损失函数
+* **CIoU（默认）**
+```python
+# 训练代码
+python train.py --loss_category CIoU
+```
+* **DIoU**
+```python
+# 训练代码
+python train.py --loss_category DIoU
+```
+* **GIoU**
+```python
+# 训练代码
+python train.py --loss_category GIoU
+```
+* **EIoU**
+```python
+# 训练代码
+python train.py --loss_category EIoU
+```
+* **SIoU**
+```python
+# 训练代码
+python train.py --loss_category SIoU
+```
 ______________________________________________________________________
 
-## 🛠️ Usage
 
-### Installation and Inference Examples
-
-- Installation via pip
-  ```python
-  # clone yolort repository locally
-  git clone https://github.com/Him-wen/awesome-yolo.git
-  cd awesome-yolo
-  
-  # install in editable mode
-  pip install -r requirements.txt
-
-  # run
-  python train.py
-  ```
-______________________________________________________________________
 
 ## 🍋 网络模型架构图
 * [yolov7](https://github.com/Him-wen/awesome-yolo#yolov7)
