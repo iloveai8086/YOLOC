@@ -137,6 +137,24 @@ ______________________________________________________________________
 
 ## 🍉 Documentation
 [model配置yaml文件](docs/model.md)
+<details open>
+<summary>教程</summary>
+
+- [训练自定义数据](https://github.com/ultralytics/yolov5/wiki/Train-Custom-Data)  🚀 推荐
+- [获得最佳训练效果的技巧](https://github.com/ultralytics/yolov5/wiki/Tips-for-Best-Training-Results)  ☘️ 推荐
+- [使用 Weights & Biases 记录实验](https://github.com/ultralytics/yolov5/issues/1289)  🌟 新
+- [Roboflow：数据集、标签和主动学习](https://github.com/ultralytics/yolov5/issues/4975)  🌟 新
+- [多GPU训练](https://github.com/ultralytics/yolov5/issues/475)
+- [PyTorch Hub](https://github.com/ultralytics/yolov5/issues/36)  ⭐ 新
+- [TFLite, ONNX, CoreML, TensorRT 导出](https://github.com/ultralytics/yolov5/issues/251) 🚀
+- [测试时数据增强 (TTA)](https://github.com/ultralytics/yolov5/issues/303)
+- [模型集成](https://github.com/ultralytics/yolov5/issues/318)
+- [模型剪枝/稀疏性](https://github.com/ultralytics/yolov5/issues/304)
+- [超参数进化](https://github.com/ultralytics/yolov5/issues/607)
+- [带有冻结层的迁移学习](https://github.com/ultralytics/yolov5/issues/1314) ⭐ 新
+- [YOLOv5架构概要](https://github.com/ultralytics/yolov5/issues/6998) ⭐ 新
+
+</details>
 ______________________________________________________________________
 
 ## 🎓 Acknowledgement
