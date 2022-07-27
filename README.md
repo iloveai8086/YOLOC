@@ -52,6 +52,14 @@ python train.py --loss_category SIoU
 ______________________________________________________________________
 
 
+#### 🔥YOLO系列热力图可视化
+<div align=“center”>
+<img src='https://github.com/Him-wen/OD_Heatmap/raw/main/images/bus.jpg' width="200px">
+<img src='https://github.com/Him-wen/OD_Heatmap/raw/main/outputs/bus/1_bus-res.jpg' width="200px">
+<div>
+
+[🔗OD_Heatmap链接](https://github.com/Him-wen/OD_Heatmap)
+
 
 ## 🍋 网络模型架构图
 * [yolov7](https://github.com/Him-wen/awesome-yolo#yolov7)
