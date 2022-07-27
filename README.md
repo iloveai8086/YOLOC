@@ -67,6 +67,9 @@ ______________________________________________________________________
 * [yolox](https://github.com/Him-wen/awesome-yolo#yolox)
 * [yolov5](https://github.com/Him-wen/awesome-yolo#yolov5)
 * [yolor](https://github.com/Him-wen/awesome-yolo#yolor)
+* [pp-yoloe](https://github.com/Him-wen/awesome-yolo#pp-yoloe)
+* [pp-yolo2](https://github.com/Him-wen/awesome-yolo#pp-yolo2)
+* [pp-yolo](https://github.com/Him-wen/awesome-yolo#pp-yolo)
 * [scaled_yolov4](https://github.com/Him-wen/awesome-yolo#scaled_yolov4)
 * [yolov4](https://github.com/Him-wen/awesome-yolo#yolov4)
 * [yolov3](https://github.com/Him-wen/awesome-yolo#yolov3)  
@@ -103,6 +106,25 @@ ______________________________________________________________________
 
 
 ______________________________________________________________________
+
+### PP-YOLOE🚀🎈
+
+<img src='docs/image/ppyoloe_model.png'>
+
+______________________________________________________________________
+
+### PP-YOLO2🚀🎈
+
+<img src='docs/image/ppyolo2_model.png'>
+
+______________________________________________________________________
+
+### PP-YOLO🚀🎈
+
+<img src='docs/image/ppyolo_model.png'>
+
+______________________________________________________________________
+
 
 ### Scaled_YOLOv4🚀🎈
 
