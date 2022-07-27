@@ -212,7 +212,7 @@ class ConfusionMatrix:
             print(' '.join(map(str, self.matrix[i])))
 
 
-def bbox_iou(box1, box2, xywh=True, GIoU=False, DIoU=False, CIoU=False, EIoU=False,eps=1e-7):
+def bbox_iou(box1, box2, xywh=True, GIoU=False, DIoU=False, CIoU=False, EIoU=False, SIoU=False, eps=1e-7):
     # Returns Intersection over Union (IoU) of box1(1,4) to box2(n,4)
 
     # Get the coordinates of bounding boxes
@@ -236,10 +236,10 @@ def bbox_iou(box1, box2, xywh=True, GIoU=False, DIoU=False, CIoU=False, EIoU=Fal
 
     # IoU
     iou = inter / union
-    if GIoU or DIoU or CIoU or EIoU:
+    if GIoU or DIoU or CIoU or EIoU or SIoU:
         cw = torch.max(b1_x2, b2_x2) - torch.min(b1_x1, b2_x1)  # convex (smallest enclosing box) width
         ch = torch.max(b1_y2, b2_y2) - torch.min(b1_y1, b2_y1)  # convex height
-        if CIoU or DIoU or EIoU:  # Distance or Complete IoU https://arxiv.org/abs/1911.08287v1
+        if CIoU or DIoU or EIoU or SIoU:  # Distance or Complete IoU https://arxiv.org/abs/1911.08287v1
             c2 = cw ** 2 + ch ** 2 + eps  # convex diagonal squared
             rho2 = ((b2_x1 + b2_x2 - b1_x1 - b1_x2) ** 2 +
                     (b2_y1 + b2_y2 - b1_y1 - b1_y2) ** 2) / 4  # center distance squared
@@ -250,6 +250,23 @@ def bbox_iou(box1, box2, xywh=True, GIoU=False, DIoU=False, CIoU=False, EIoU=Fal
                 with torch.no_grad():
                     alpha = v / (v - iou + (1 + eps))
                 return iou - (rho2 / c2 + v * alpha)  # CIoU
+            elif SIoU:
+                s_cw = (b2_x1 + b2_x2 - b1_x1 - b1_x2) * 0.5
+                s_ch = (b2_y1 + b2_y2 - b1_y1 - b1_y2) * 0.5
+                sigma = torch.pow(s_cw ** 2 + s_ch ** 2, 0.5)
+                sin_alpha_1 = torch.abs(s_cw) / sigma
+                sin_alpha_2 = torch.abs(s_ch) / sigma
+                threshold = pow(2, 0.5) / 2
+                sin_alpha = torch.where(sin_alpha_1 > threshold, sin_alpha_2, sin_alpha_1)
+                angle_cost = torch.cos(torch.arcsin(sin_alpha) * 2 - math.pi / 2)
+                rho_x = (s_cw / cw) ** 2
+                rho_y = (s_ch / ch) ** 2
+                gamma = angle_cost - 2
+                distance_cost = 2 - torch.exp(gamma * rho_x) - torch.exp(gamma * rho_y)
+                omiga_w = torch.abs(w1 - w2) / torch.max(w1, w2)
+                omiga_h = torch.abs(h1 - h2) / torch.max(h1, h2)
+                shape_cost = torch.pow(1 - torch.exp(-1 * omiga_w), 4) + torch.pow(1 - torch.exp(-1 * omiga_h), 4)
+                return iou - 0.5 * (distance_cost + shape_cost)
             else:
                 w_dis=torch.pow(b1_x2-b1_x1-b2_x2+b2_x1, 2)
                 h_dis=torch.pow(b1_y2-b1_y1-b2_y2+b2_y1, 2)

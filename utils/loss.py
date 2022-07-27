@@ -285,6 +285,8 @@ class ComputeLoss:
                     iou = bbox_iou(pbox, tbox[i], GIoU=True).squeeze()
                 elif self.loss_category == 'DIoU':
                     iou = bbox_iou(pbox, tbox[i], DIoU=True).squeeze()
+                elif self.loss_category == 'SIoU':
+                    iou = bbox_iou(pbox, tbox[i], DIoU=True).squeeze()
                 # iou = bbox_iou(pbox, tbox[i], CIoU=True).squeeze()  # iou(prediction, target)
                 if self.g2 > 0:  # Focal-EIOU https://arxiv.org/abs/2101.08158
                     lbox += ((bbox_iou(pbox.T, tbox[i], x1y1x2y2=False) ** self.g2) * (1 - iou)).mean()
