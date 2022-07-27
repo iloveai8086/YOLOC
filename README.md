@@ -2,8 +2,9 @@
 
 <div align=“center”>
 
-🚀**yolo系列v3、v4、v5、v6、v7、x、r**以及其他改进的网络结构
+<img src='docs/image/logo.png'>
 
+🚀**yolo系列v3、v4、v5、v6、v7、x、r**以及其他改进的网络结构
 #### awesome-yolo中支持的模块有：
 
 - [x] 包含主流的 YOLOv3 模型网络结构中；
