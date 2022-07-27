@@ -574,7 +574,7 @@ def train(hyp, opt, device, callbacks):  # hyp is path/to/hyp.yaml or hyp dictio
 
 def parse_opt(known=False):
     parser = argparse.ArgumentParser()
-    parser.add_argument('--mode', type=str, default='yolo', help='yolo   :[yolov3, yolov4, yolov5, yolor, yolov5-lite]'
+    parser.add_argument('--mode', type=str, default='yolo', help='yolo   :[yolov3, yolov4, scaled_yolov4, yolov5, yolor, yolov5-lite]'
                                                                   'yolov7 :[yolov7, ]'
                                                                   'yolox  :[yolox, yolox-lite]'
                                                                   'yolov6  :[yolov6, ]')
