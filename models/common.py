@@ -28,7 +28,7 @@ from utils.general import (LOGGER, check_requirements, check_suffix, check_versi
 from utils.plots import Annotator, colors, save_one_box
 from utils.torch_utils import copy_attr, time_sync
 
-# attention
+# attention block
 from models.attention.CA import CoordAtt
 from models.attention.CBAM import CBAM
 
