@@ -28,6 +28,9 @@ from utils.general import (LOGGER, check_requirements, check_suffix, check_versi
 from utils.plots import Annotator, colors, save_one_box
 from utils.torch_utils import copy_attr, time_sync
 
+# attention
+from models.attention.CA import CoordAtt
+from models.attention.CBAM import CBAM
 
 class ReOrg(nn.Module):
     def __init__(self):
@@ -1233,54 +1236,6 @@ class ASFFV5(nn.Module):
         else:
             return out
 
-
-class ChannelAttentionModule(nn.Module):
-    def __init__(self, c1, reduction=16):
-        super(ChannelAttentionModule, self).__init__()
-        mid_channel = c1 // reduction
-        self.avg_pool = nn.AdaptiveAvgPool2d(1)
-        self.max_pool = nn.AdaptiveMaxPool2d(1)
-
-        self.shared_MLP = nn.Sequential(
-            nn.Linear(in_features=c1, out_features=mid_channel),
-            nn.LeakyReLU(0.1, inplace=True),
-            nn.Linear(in_features=mid_channel, out_features=c1)
-        )
-        self.act = nn.Sigmoid()
-        # self.act=nn.SiLU()
-
-    def forward(self, x):
-        avgout = self.shared_MLP(self.avg_pool(x).view(x.size(0), -1)).unsqueeze(2).unsqueeze(3)
-        maxout = self.shared_MLP(self.max_pool(x).view(x.size(0), -1)).unsqueeze(2).unsqueeze(3)
-        return self.act(avgout + maxout)
-
-
-class SpatialAttentionModule(nn.Module):
-    def __init__(self):
-        super(SpatialAttentionModule, self).__init__()
-        self.conv2d = nn.Conv2d(in_channels=2, out_channels=1, kernel_size=7, stride=1, padding=3)
-        self.act = nn.Sigmoid()
-
-    def forward(self, x):
-        avgout = torch.mean(x, dim=1, keepdim=True)
-        maxout, _ = torch.max(x, dim=1, keepdim=True)
-        out = torch.cat([avgout, maxout], dim=1)
-        out = self.act(self.conv2d(out))
-        return out
-
-
-class CBAM(nn.Module):
-    def __init__(self, c1, c2):
-        super(CBAM, self).__init__()
-        self.channel_attention = ChannelAttentionModule(c1)
-        self.spatial_attention = SpatialAttentionModule()
-
-    def forward(self, x):
-        out = self.channel_attention(x) * x
-        out = self.spatial_attention(out) * out
-        return out
-
-
 class ResBlock_CBAM(nn.Module):
     def __init__(self, in_places, places, stride=1, downsampling=False, expansion=4):
         super(ResBlock_CBAM, self).__init__()
@@ -1317,63 +1272,6 @@ class ResBlock_CBAM(nn.Module):
         out += residual
         out = self.relu(out)
         return out
-
-
-class h_sigmoid(nn.Module):
-    def __init__(self, inplace=True):
-        super(h_sigmoid, self).__init__()
-        self.relu = nn.ReLU6(inplace=inplace)
-
-    def forward(self, x):
-        return self.relu(x + 3) / 6
-
-
-class h_swish(nn.Module):
-    def __init__(self, inplace=True):
-        super(h_swish, self).__init__()
-        self.sigmoid = h_sigmoid(inplace=inplace)
-
-    def forward(self, x):
-        return x * self.sigmoid(x)
-
-
-class CoordAtt(nn.Module):
-    def __init__(self, inp, oup, reduction=32):
-        super(CoordAtt, self).__init__()
-
-        mip = max(8, inp // reduction)
-
-        self.conv1 = nn.Conv2d(inp, mip, kernel_size=1, stride=1, padding=0)
-        self.bn1 = nn.BatchNorm2d(mip)
-        self.act = h_swish()
-
-        self.conv_h = nn.Conv2d(mip, oup, kernel_size=1, stride=1, padding=0)
-        self.conv_w = nn.Conv2d(mip, oup, kernel_size=1, stride=1, padding=0)
-
-    def forward(self, x):
-        identity = x
-
-        n, c, h, w = x.size()
-        pool_h = nn.AdaptiveAvgPool2d((h, 1))
-        pool_w = nn.AdaptiveAvgPool2d((1, w))
-        x_h = pool_h(x)
-        x_w = pool_w(x).permute(0, 1, 3, 2)
-
-        y = torch.cat([x_h, x_w], dim=2)
-        y = self.conv1(y)
-        y = self.bn1(y)
-        y = self.act(y)
-
-        x_h, x_w = torch.split(y, [h, w], dim=2)
-        x_w = x_w.permute(0, 1, 3, 2)
-
-        a_h = self.conv_h(x_h).sigmoid()
-        a_w = self.conv_w(x_w).sigmoid()
-
-        out = identity * a_w * a_h
-
-        return out
-
 
 class MHSA(nn.Module):
     def __init__(self, n_dims, width=14, height=14, heads=4, pos_emb=False):

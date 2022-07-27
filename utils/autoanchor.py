@@ -45,7 +45,7 @@ def check_anchors(dataset, model, thr=4.0, imgsz=640):
     bpr, aat = metric(anchors.cpu().view(-1, 2))
     s = f'\n{PREFIX}{aat:.2f} anchors/target, {bpr:.3f} Best Possible Recall (BPR). '
     if bpr > 0.98:  # threshold to recompute
-        LOGGER.info(emojis(f'{s}Current anchors are a good fit to dataset ✅'))
+        LOGGER.info(emojis(f'{s}Current anchors are a good fit to dataset 🚀'))
     else:
         LOGGER.info(emojis(f'{s}Anchors are a poor fit to dataset ⚠️, attempting to improve...'))
         na = m.anchors.numel() // 2  # number of anchors
@@ -59,7 +59,7 @@ def check_anchors(dataset, model, thr=4.0, imgsz=640):
             m.anchors[:] = anchors.clone().view_as(m.anchors)
             check_anchor_order(m)  # must be in pixel-space (not grid-space)
             m.anchors /= stride
-            s = f'{PREFIX}Done ✅ (optional: update model *.yaml to use these anchors in the future)'
+            s = f'{PREFIX}Done 🚀 (optional: update model *.yaml to use these anchors in the future)'
         else:
             s = f'{PREFIX}Done ⚠️ (original anchors better than new anchors, proceeding with original anchors)'
         LOGGER.info(emojis(s))

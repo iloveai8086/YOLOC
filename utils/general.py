@@ -311,7 +311,7 @@ def check_git_status():
     if n > 0:
         s += f"⚠️ YOLOv5 is out of date by {n} commit{'s' * (n > 1)}. Use `git pull` or `git clone {url}` to update."
     else:
-        s += f'up to date with {url} ✅'
+        s += f'up to date with {url} 🚀'
     LOGGER.info(emojis(s))  # emoji-safe
 
 
@@ -501,7 +501,7 @@ def check_dataset(data, autodownload=True):
                 else:  # python script
                     r = exec(s, {'yaml': data})  # return None
                 dt = f'({round(time.time() - t, 1)}s)'    
-                s = f"success ✅ {dt}, saved to {colorstr('bold', root)}" if r in (0, None) else f"failure {dt} ❌"
+                s = f"success 🚀 {dt}, saved to {colorstr('bold', root)}" if r in (0, None) else f"failure {dt} ❌"
                 LOGGER.info(emojis(f"Dataset download {s}"))
             else:
                 raise Exception('Dataset not found ❌❌❌❌.')
@@ -522,7 +522,7 @@ def check_amp(model):
     m.amp = True
     b = m(im).xyxy[0]  # AMP inference
     if (a.shape == b.shape) and torch.allclose(a, b, atol=1.0):  # close to 1.0 pixel bounding box
-        LOGGER.info(emojis(f'{prefix}checks passed ✅'))
+        LOGGER.info(emojis(f'{prefix}checks passed 🚀'))
         return True
     else:
         help_url = 'https://github.com/ultralytics/yolov5/issues/7908'
@@ -868,7 +868,7 @@ def non_max_suppression(prediction,
     return output
 
 
-def strip_optimizer(f='yolox-lite-g.pt', s=''):  # from utils.general import *; strip_optimizer()
+def strip_optimizer(f='best.pt', s=''):  # from utils.general import *; strip_optimizer()
     # Strip optimizer from 'f' to finalize training, optionally save as 's'
     x = torch.load(f, map_location=torch.device('cpu'))
     if x.get('ema'):
