@@ -2,6 +2,9 @@
 
 ## 30+种 注意力机制
 
+对应注意力的代码在👇👇👇  
+[https://github.com/Him-wen/awesome-yolo/tree/main/docs/attention_model](https://github.com/Him-wen/awesome-yolo/tree/main/docs/attention_model)
+
 - [Attention Series](#attention-series)
 
     - [1. External Attention](#1-external-attention-usage)
@@ -824,5 +827,5 @@ None
 
 <details><summary> <b>Expand</b> </summary>
 
-* [🔗attentionl参考](https://github.com/xmu-xiaoma666/External-Attention-pytorch)
+* [🔗attention参考](https://github.com/xmu-xiaoma666/External-Attention-pytorch)
 </details>
