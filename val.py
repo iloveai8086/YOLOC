@@ -39,7 +39,7 @@ from utils.callbacks import Callbacks
 from utils.dataloaders import create_dataloader
 from utils.general import (LOGGER, check_dataset, check_img_size, check_requirements, check_yaml,
                            coco80_to_coco91_class, colorstr, emojis, increment_path, non_max_suppression, print_args,
-                           scale_coords, xywh2xyxy, xyxy2xywh)
+                           scale_coords, soft_nms, xywh2xyxy, xyxy2xywh)
 from utils.metrics import ConfusionMatrix, ap_per_class, box_iou
 from utils.plots import output_to_target, plot_images, plot_val_study
 from utils.torch_utils import select_device, time_sync, TracedModel
@@ -123,6 +123,8 @@ def run(
         callbacks=Callbacks(),
         compute_loss=None,
         trace=False,
+        soft=False,
+        merge=False
 ):
     # Initialize/load model and set device
     training = model is not None
@@ -224,7 +226,10 @@ def run(
         targets[:, 2:] *= torch.tensor((width, height, width, height), device=device)  # to pixels
         lb = [targets[targets[:, 0] == i, 1:] for i in range(nb)] if save_hybrid else []  # for autolabelling
         t3 = time_sync()
-        out = non_max_suppression(out, conf_thres, iou_thres, labels=lb, multi_label=True, agnostic=single_cls)
+        if soft:
+            out = soft_nms(out, conf_thres, iou_thres, multi_label=True)
+        else:
+            out = non_max_suppression(out, conf_thres, iou_thres, labels=lb, multi_label=True, agnostic=single_cls, merge=merge)
         dt[2] += time_sync() - t3
 
         # Metrics
@@ -340,8 +345,8 @@ def run(
 def parse_opt():
     parser = argparse.ArgumentParser()
     parser.add_argument('--data', type=str, default=ROOT / 'data/coco128.yaml', help='dataset.yaml path')
-    parser.add_argument('--weights', nargs='+', type=str, default=ROOT / 'yolov5s.pt', help='model.pt path(s)')
-    parser.add_argument('--batch-size', type=int, default=32, help='batch size')
+    parser.add_argument('--weights', nargs='+', type=str, default=ROOT / 'weights/yolov5s.pt', help='model.pt path(s)')
+    parser.add_argument('--batch-size', type=int, default=2, help='batch size')
     parser.add_argument('--imgsz', '--img', '--img-size', type=int, default=640, help='inference size (pixels)')
     parser.add_argument('--conf-thres', type=float, default=0.001, help='confidence threshold')
     parser.add_argument('--iou-thres', type=float, default=0.6, help='NMS IoU threshold')
@@ -361,6 +366,8 @@ def parse_opt():
     parser.add_argument('--half', action='store_true', help='use FP16 half-precision inference')
     parser.add_argument('--dnn', action='store_true', help='use OpenCV DNN for ONNX inference')
     parser.add_argument('--trace', action='store_true', help='trace model')
+    parser.add_argument('--soft', action='store_true', help='use softnms')
+    parser.add_argument('--merge', action='store_true', help='use softnms')
     opt = parser.parse_args()
     opt.data = check_yaml(opt.data)  # check YAML
     opt.save_json |= opt.data.endswith('coco.yaml')
