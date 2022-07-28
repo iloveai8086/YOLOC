@@ -27,28 +27,46 @@
 #### 🌟损失函数
 * **CIoU（默认）**
 ```python
-# 训练代码
+# 代码
 python train.py --loss_category CIoU
 ```
 * **DIoU**
 ```python
-# 训练代码
+# 代码
 python train.py --loss_category DIoU
 ```
 * **GIoU**
 ```python
-# 训练代码
+# 代码
 python train.py --loss_category GIoU
 ```
 * **EIoU**
 ```python
-# 训练代码
+# 代码
 python train.py --loss_category EIoU
 ```
 * **SIoU**
 ```python
-# 训练代码
+# 代码
 python train.py --loss_category SIoU
+```
+______________________________________________________________________
+
+#### 🌟NMS
+* **NMS（默认）**
+```python
+# 代码
+python val.py
+```
+* **Merge-NMS**
+```python
+# 代码
+python val.py --merge
+```
+* **Soft-NMS**
+```python
+# 代码
+python val.py --soft
 ```
 ______________________________________________________________________
 
