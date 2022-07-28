@@ -27,7 +27,7 @@
 - [x] 🍉FPN、PANet、BiFPN等结构；
 - [x] 🍉CIoU、DIoU、GIoU、EIoU、SIoU等损失函数；
 - [x] 🍉NMS、Merge-NMS、Soft-NMS等NMS方法；
-- [x] 🍉SE、CBAM、ECA、BAM、DANet...[详细链接🔗](#多种attention注意力机制) 等31种Attention注意力机制；
+- [x] 🍉SE、CBAM、ECA、BAM、DANet...[详细链接🔗](#多种attention注意力机制) 等30+ Attention注意力机制；
 - [x] 🍉SiLU、Hardswish、Mish、MemoryEfficientMish、FReLU、AconC、MetaAconC等激活函数；
 - [x] 🍉Conv, GhostConv, Bottleneck, GhostBottleneck, SPP, SPPF, DWConv, MixConv2d, Focus, CrossConv, BottleneckCSP, CBAM, ResBlock_CBAM, CoordAtt, CrossConv, C3, CTR3, Involution, C3SPP, C3Ghost, CARAFE, nn.ConvTranspose2d, DWConvTranspose2d, C3x, SPPCSPC, GhostSPPCSPC, BottleneckCSPA, BottleneckCSPB, ConvSig, BottleneckCSPC, RepConv, RepConv_OREPA, RepBottleneck, RepBottleneckCSPA, RepBottleneckCSPB, RepBottleneckCSPC, Res, ResCSPA, ResCSPB, ResCSPC, RepRes, RepResCSPA, RepResCSPB, RepResCSPC, ResX, ResXCSPA, ResXCSPB, ResXCSPC, RepResX, RepResXCSPA, RepResXCSPB, RepResXCSPC, Ghost, GhostCSPA, GhostCSPB, GhostCSPC, SwinTransformerBlock, STCSPA, STCSPB, STCSPC, SwinTransformer2Block, ST2CSPA, ST2CSPB, ST2CSPC, conv_bn_relu_maxpool, Shuffle_Block, RepVGGBlock, CBH, LC_Block, Dense, DWConvblock, BottleneckCSP2, DWT, BottleneckCSP2SAM, VoVCSP等网络模型组合模块
 代码 **./models/common.py文件** 内搜索🔍👉[对应模块链接🔗](https://github.com/Him-wen/YOLOC/blob/main/models/common.py)
