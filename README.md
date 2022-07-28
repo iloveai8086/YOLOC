@@ -27,7 +27,7 @@
 - [x] FPN、PANet、BiFPN等结构；
 - [x] CIoU、DIoU、GIoU、EIoU、SIoU等损失函数；
 - [x] NMS、Merge-NMS、Soft-NMS等NMS方法；
-- [x] SE、CBAM、ECA、BAM、DANet...[详细链接🔗](#🌟多种Attention注意力机制🚀🚀🚀) 等31种Attention注意力机制；
+- [x] SE、CBAM、ECA、BAM、DANet...[详细链接🔗](#多种attention注意力机制) 等31种Attention注意力机制；
 - [x] SiLU、Hardswish、Mish、MemoryEfficientMish、FReLU、AconC、MetaAconC等激活函数；
 ...
 ...
