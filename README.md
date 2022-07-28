@@ -9,7 +9,7 @@
 
 **Combining** some modules and tricks to improve the YOLO detection model, the effect of using different datasets is inconsistent. Need to try and verify through specific experiments
 
-🚀**yolo系列v3、v4、v5、v6、v7、x、r**以及其他改进的网络结构 <img src='https://img.shields.io/github/stars/Him-wen/awesome-yolo?style=social'>
+🚀**yolo系列v3、v4、v5、v6、v7、x、r**以及其他改进的网络结构 <img src='https://img.shields.io/github/stars/Him-wen/YOLOC?style=social'>
 #### YOLOC中支持的模块有：
 
 - [x] 主流 🚀YOLOv3 模型网络结构；
@@ -82,7 +82,7 @@ ______________________________________________________________________
 
 #### 🌟多种Attention注意力机制🚀🚀🚀
 
-具体不同注意力机制Paper以及结构图👉👉👉[点击链接🔗](https://github.com/Him-wen/awesome-yolo/blob/main/docs/model.md)  
+具体不同注意力机制Paper以及结构图👉👉👉[点击链接🔗](https://github.com/Him-wen/YOLOC/blob/main/docs/model.md)  
 
 **Attention Series🚀🚀🚀**
 1. 🎈External Attention
@@ -191,17 +191,17 @@ ______________________________________________________________________
 
 
 ## 🍋 网络模型架构图
-* [yolov7](https://github.com/Him-wen/awesome-yolo#yolov7)
-* [yolov6](https://github.com/Him-wen/awesome-yolo#yolov7)
-* [yolox](https://github.com/Him-wen/awesome-yolo#yolox)
-* [yolov5](https://github.com/Him-wen/awesome-yolo#yolov5)
-* [yolor](https://github.com/Him-wen/awesome-yolo#yolor)
-* [pp-yoloe](https://github.com/Him-wen/awesome-yolo#pp-yoloe)
-* [pp-yolo2](https://github.com/Him-wen/awesome-yolo#pp-yolo2)
-* [pp-yolo](https://github.com/Him-wen/awesome-yolo#pp-yolo)
-* [scaled_yolov4](https://github.com/Him-wen/awesome-yolo#scaled_yolov4)
-* [yolov4](https://github.com/Him-wen/awesome-yolo#yolov4)
-* [yolov3](https://github.com/Him-wen/awesome-yolo#yolov3)  
+* [yolov7](https://github.com/Him-wen/YOLOC#yolov7)
+* [yolov6](https://github.com/Him-wen/YOLOC#yolov7)
+* [yolox](https://github.com/Him-wen/YOLOC#yolox)
+* [yolov5](https://github.com/Him-wen/YOLOC#yolov5)
+* [yolor](https://github.com/Him-wen/YOLOC#yolor)
+* [pp-yoloe](https://github.com/Him-wen/YOLOC#pp-yoloe)
+* [pp-yolo2](https://github.com/Him-wen/YOLOC#pp-yolo2)
+* [pp-yolo](https://github.com/Him-wen/YOLOC#pp-yolo)
+* [scaled_yolov4](https://github.com/Him-wen/YOLOC#scaled_yolov4)
+* [yolov4](https://github.com/Him-wen/YOLOC#yolov4)
+* [yolov3](https://github.com/Him-wen/YOLOC#yolov3)  
 更新...
 
 ### YOLOv7🚀🎈

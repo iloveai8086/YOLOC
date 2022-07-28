@@ -3,7 +3,7 @@
 ## 30+种 注意力机制
 
 对应注意力的代码在👇👇👇  
-[https://github.com/Him-wen/awesome-yolo/tree/main/docs/attention_model](https://github.com/Him-wen/awesome-yolo/tree/main/docs/attention_model)
+[https://github.com/Him-wen/YOLOC/tree/main/docs/attention_model](https://github.com/Him-wen/YOLOC/tree/main/docs/attention_model)
 
 - [Attention Series](#attention-series)
 
