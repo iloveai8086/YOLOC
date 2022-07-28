@@ -3,111 +3,111 @@
 ## 30+种 注意力机制
 
 - [Attention Series](#attention-series)
-    - [1. External Attention Usage](#1-external-attention-usage)
+    - [1. External Attention](#1-external-attention-usage)
 
-    - [2. Self Attention Usage](#2-self-attention-usage)
+    - [2. Self Attention](#2-self-attention-usage)
 
-    - [3. Simplified Self Attention Usage](#3-simplified-self-attention-usage)
+    - [3. Simplified Self Attention](#3-simplified-self-attention-usage)
 
-    - [4. Squeeze-and-Excitation Attention Usage](#4-squeeze-and-excitation-attention-usage)
+    - [4. Squeeze-and-Excitation Attention](#4-squeeze-and-excitation-attention-usage)
 
-    - [5. SK Attention Usage](#5-sk-attention-usage)
+    - [5. SK Attention](#5-sk-attention-usage)
 
-    - [6. CBAM Attention Usage](#6-cbam-attention-usage)
+    - [6. CBAM Attention](#6-cbam-attention-usage)
 
-    - [7. BAM Attention Usage](#7-bam-attention-usage)
+    - [7. BAM Attention](#7-bam-attention-usage)
     
-    - [8. ECA Attention Usage](#8-eca-attention-usage)
+    - [8. ECA Attention](#8-eca-attention-usage)
 
-    - [9. DANet Attention Usage](#9-danet-attention-usage)
+    - [9. DANet Attention](#9-danet-attention-usage)
 
-    - [10. Pyramid Split Attention (PSA) Usage](#10-Pyramid-Split-Attention-Usage)
+    - [10. Pyramid Split Attention (PSA)](#10-Pyramid-Split-Attention-Usage)
 
-    - [11. Efficient Multi-Head Self-Attention(EMSA) Usage](#11-Efficient-Multi-Head-Self-Attention-Usage)
+    - [11. Efficient Multi-Head Self-Attention(EMSA)](#11-Efficient-Multi-Head-Self-Attention-Usage)
 
-    - [12. Shuffle Attention Usage](#12-Shuffle-Attention-Usage)
+    - [12. Shuffle Attention](#12-Shuffle-Attention-Usage)
     
-    - [13. MUSE Attention Usage](#13-MUSE-Attention-Usage)
+    - [13. MUSE Attention](#13-MUSE-Attention-Usage)
   
-    - [14. SGE Attention Usage](#14-SGE-Attention-Usage)
+    - [14. SGE Attention](#14-SGE-Attention-Usage)
 
-    - [15. A2 Attention Usage](#15-A2-Attention-Usage)
+    - [15. A2 Attention](#15-A2-Attention-Usage)
 
-    - [16. AFT Attention Usage](#16-AFT-Attention-Usage)
+    - [16. AFT Attention](#16-AFT-Attention-Usage)
 
-    - [17. Outlook Attention Usage](#17-Outlook-Attention-Usage)
+    - [17. Outlook Attention](#17-Outlook-Attention-Usage)
 
-    - [18. ViP Attention Usage](#18-ViP-Attention-Usage)
+    - [18. ViP Attention](#18-ViP-Attention-Usage)
 
-    - [19. CoAtNet Attention Usage](#19-CoAtNet-Attention-Usage)
+    - [19. CoAtNet Attention](#19-CoAtNet-Attention-Usage)
 
-    - [20. HaloNet Attention Usage](#20-HaloNet-Attention-Usage)
+    - [20. HaloNet Attention](#20-HaloNet-Attention-Usage)
 
-    - [21. Polarized Self-Attention Usage](#21-Polarized-Self-Attention-Usage)
+    - [21. Polarized Self-Attention](#21-Polarized-Self-Attention-Usage)
 
-    - [22. CoTAttention Usage](#22-CoTAttention-Usage)
+    - [22. CoTAttention](#22-CoTAttention-Usage)
 
-    - [23. Residual Attention Usage](#23-Residual-Attention-Usage)
+    - [23. Residual Attention](#23-Residual-Attention-Usage)
   
-    - [24. S2 Attention Usage](#24-S2-Attention-Usage)
+    - [24. S2 Attention](#24-S2-Attention-Usage)
 
-    - [25. GFNet Attention Usage](#25-GFNet-Attention-Usage)
+    - [25. GFNet Attention](#25-GFNet-Attention-Usage)
 
-    - [26. Triplet Attention Usage](#26-TripletAttention-Usage)
+    - [26. Triplet Attention](#26-TripletAttention-Usage)
 
-    - [27. Coordinate Attention Usage](#27-Coordinate-Attention-Usage)
+    - [27. Coordinate Attention](#27-Coordinate-Attention-Usage)
 
-    - [28. MobileViT Attention Usage](#28-MobileViT-Attention-Usage)
+    - [28. MobileViT Attention](#28-MobileViT-Attention-Usage)
 
-    - [29. ParNet Attention Usage](#29-ParNet-Attention-Usage)
+    - [29. ParNet Attention](#29-ParNet-Attention-Usage)
 
-    - [30. UFO Attention Usage](#30-UFO-Attention-Usage)
+    - [30. UFO Attention](#30-UFO-Attention-Usage)
   
-    - [31. MobileViTv2 Attention Usage](#31-MobileViTv2-Attention-Usage)
+    - [31. MobileViTv2 Attention](#31-MobileViTv2-Attention-Usage)
   
 
 - [Backbone Series](#Backbone-series)
 
-    - [1. ResNet Usage](#1-ResNet-Usage)
+    - [1. ResNet](#1-ResNet-Usage)
 
-    - [2. ResNeXt Usage](#2-ResNeXt-Usage)
+    - [2. ResNeXt](#2-ResNeXt-Usage)
 
-    - [3. MobileViT Usage](#3-MobileViT-Usage)
+    - [3. MobileViT](#3-MobileViT-Usage)
 
-    - [4. ConvMixer Usage](#4-ConvMixer-Usage)
+    - [4. ConvMixer](#4-ConvMixer-Usage)
 
 
 - [MLP Series](#mlp-series)
 
-    - [1. RepMLP Usage](#1-RepMLP-Usage)
+    - [1. RepMLP](#1-RepMLP-Usage)
 
-    - [2. MLP-Mixer Usage](#2-MLP-Mixer-Usage)
+    - [2. MLP-Mixer](#2-MLP-Mixer-Usage)
 
-    - [3. ResMLP Usage](#3-ResMLP-Usage)
+    - [3. ResMLP](#3-ResMLP-Usage)
 
-    - [4. gMLP Usage](#4-gMLP-Usage)
+    - [4. gMLP](#4-gMLP-Usage)
 
-    - [5. sMLP Usage](#5-sMLP-Usage)
+    - [5. sMLP](#5-sMLP-Usage)
 
 - [Re-Parameter(ReP) Series](#Re-Parameter-series)
 
-    - [1. RepVGG Usage](#1-RepVGG-Usage)
+    - [1. RepVGG](#1-RepVGG-Usage)
 
-    - [2. ACNet Usage](#2-ACNet-Usage)
+    - [2. ACNet](#2-ACNet-Usage)
 
-    - [3. Diverse Branch Block(DDB) Usage](#3-Diverse-Branch-Block-Usage)
+    - [3. Diverse Branch Block(DDB)](#3-Diverse-Branch-Block-Usage)
 
 - [Convolution Series](#Convolution-series)
 
-    - [1. Depthwise Separable Convolution Usage](#1-Depthwise-Separable-Convolution-Usage)
+    - [1. Depthwise Separable Convolution](#1-Depthwise-Separable-Convolution-Usage)
 
-    - [2. MBConv Usage](#2-MBConv-Usage)
+    - [2. MBConv](#2-MBConv-Usage)
 
-    - [3. Involution Usage](#3-Involution-Usage)
+    - [3. Involution](#3-Involution-Usage)
 
-    - [4. DynamicConv Usage](#4-DynamicConv-Usage)
+    - [4. DynamicConv](#4-DynamicConv-Usage)
 
-    - [5. CondConv Usage](#5-CondConv-Usage)
+    - [5. CondConv](#5-CondConv-Usage)
 
 ***
 
@@ -192,7 +192,7 @@
 
 ***
 
-### 1. External Attention Usage
+### 1. External Attention
 #### 1.1. Paper
 ["Beyond Self-attention: External Attention using Two Linear Layers for Visual Tasks"](https://arxiv.org/abs/2105.02358)
 
@@ -201,7 +201,7 @@
 ***
 
 
-### 2. Self Attention Usage
+### 2. Self Attention
 #### 2.1. Paper
 ["Attention Is All You Need"](https://arxiv.org/pdf/1706.03762.pdf)
 
@@ -210,7 +210,7 @@
 
 ***
 
-### 3. Simplified Self Attention Usage
+### 3. Simplified Self Attention
 #### 3.1. Paper
 [None]()
 
@@ -219,7 +219,7 @@
 
 ***
 
-### 4. Squeeze-and-Excitation Attention Usage
+### 4. Squeeze-and-Excitation Attention
 #### 4.1. Paper
 ["Squeeze-and-Excitation Networks"](https://arxiv.org/abs/1709.01507)
 
@@ -228,7 +228,7 @@
 
 ***
 
-### 5. SK Attention Usage
+### 5. SK Attention
 #### 5.1. Paper
 ["Selective Kernel Networks"](https://arxiv.org/pdf/1903.06586.pdf)
 
@@ -236,7 +236,7 @@
 ![](./attention_model/img/SK.png)
 ***
 
-### 6. CBAM Attention Usage
+### 6. CBAM Attention
 #### 6.1. Paper
 ["CBAM: Convolutional Block Attention Module"](https://openaccess.thecvf.com/content_ECCV_2018/papers/Sanghyun_Woo_Convolutional_Block_Attention_ECCV_2018_paper.pdf)
 
@@ -247,7 +247,7 @@
 
 ***
 
-### 7. BAM Attention Usage
+### 7. BAM Attention
 #### 7.1. Paper
 ["BAM: Bottleneck Attention Module"](https://arxiv.org/pdf/1807.06514.pdf)
 
@@ -256,7 +256,7 @@
 
 ***
 
-### 8. ECA Attention Usage
+### 8. ECA Attention
 #### 8.1. Paper
 ["ECA-Net: Efficient Channel Attention for Deep Convolutional Neural Networks"](https://arxiv.org/pdf/1910.03151.pdf)
 
@@ -265,7 +265,7 @@
 
 ***
 
-### 9. DANet Attention Usage
+### 9. DANet Attention
 #### 9.1. Paper
 ["Dual Attention Network for Scene Segmentation"](https://arxiv.org/pdf/1809.02983.pdf)
 
@@ -274,7 +274,7 @@
 
 ***
 
-### 10. Pyramid Split Attention Usage
+### 10. Pyramid Split Attention
 
 #### 10.1. Paper
 ["EPSANet: An Efficient Pyramid Split Attention Block on Convolutional Neural Network"](https://arxiv.org/pdf/2105.14447.pdf)
@@ -286,7 +286,7 @@
 ***
 
 
-### 11. Efficient Multi-Head Self-Attention Usage
+### 11. Efficient Multi-Head Self-Attention
 
 #### 11.1. Paper
 ["ResT: An Efficient Transformer for Visual Recognition"](https://arxiv.org/abs/2105.13677)
@@ -299,7 +299,7 @@
 ***
 
 
-### 12. Shuffle Attention Usage
+### 12. Shuffle Attention
 
 #### 12.1. Paper
 ["SA-NET: SHUFFLE ATTENTION FOR DEEP CONVOLUTIONAL NEURAL NETWORKS"](https://arxiv.org/pdf/2102.00240.pdf)
@@ -311,7 +311,7 @@
 ***
 
 
-### 13. MUSE Attention Usage
+### 13. MUSE Attention
 
 #### 13.1. Paper
 ["MUSE: Parallel Multi-Scale Attention for Sequence to Sequence Learning"](https://arxiv.org/abs/1911.09483)
@@ -322,7 +322,7 @@
 ***
 
 
-### 14. SGE Attention Usage
+### 14. SGE Attention
 
 #### 14.1. Paper
 [Spatial Group-wise Enhance: Improving Semantic Feature Learning in Convolutional Networks](https://arxiv.org/pdf/1905.09646.pdf)
@@ -333,7 +333,7 @@
 ***
 
 
-### 15. A2 Attention Usage
+### 15. A2 Attention
 
 #### 15.1. Paper
 [A2-Nets: Double Attention Networks](https://arxiv.org/pdf/1810.11579.pdf)
@@ -343,7 +343,7 @@
 
 ***
 
-### 16. AFT Attention Usage
+### 16. AFT Attention
 
 #### 16.1. Paper
 [An Attention Free Transformer](https://arxiv.org/pdf/2105.14103v1.pdf)
@@ -354,7 +354,7 @@
 ***
 
 
-### 17. Outlook Attention Usage
+### 17. Outlook Attention
 
 #### 17.1. Paper
 
@@ -368,7 +368,7 @@
 
 ***
 
-### 18. ViP Attention Usage
+### 18. ViP Attention
 
 #### 18.1. Paper
 
@@ -386,7 +386,7 @@
 
 
 
-### 19. CoAtNet Attention Usage
+### 19. CoAtNet Attention
 
 #### 19.1. Paper
 
@@ -404,7 +404,7 @@ None
 
 
 
-### 20. HaloNet Attention Usage
+### 20. HaloNet Attention
 
 #### 20.1. Paper
 
@@ -421,7 +421,7 @@ None
 
 ***
 
-### 21. Polarized Self-Attention Usage
+### 21. Polarized Self-Attention
 
 #### 21.1. Paper
 
@@ -436,7 +436,7 @@ None
 ***
 
 
-### 22. CoTAttention Usage
+### 22. CoTAttention
 
 #### 22.1. Paper
 
@@ -452,7 +452,7 @@ None
 ***
 
 
-### 23. Residual Attention Usage
+### 23. Residual Attention
 
 #### 23.1. Paper
 
@@ -469,7 +469,7 @@ None
 
 
 
-### 24. S2 Attention Usage
+### 24. S2 Attention
 
 #### 24.1. Paper
 
@@ -486,7 +486,7 @@ None
 
 
 
-### 25. GFNet Attention Usage
+### 25. GFNet Attention
 
 #### 25.1. Paper
 
@@ -501,7 +501,7 @@ None
 ***
 
 
-### 26. TripletAttention Usage
+### 26. TripletAttention
 
 #### 26.1. Paper
 
@@ -516,7 +516,7 @@ None
 ***
 
 
-### 27. Coordinate Attention Usage
+### 27. Coordinate Attention
 
 #### 27.1. Paper
 
@@ -531,7 +531,7 @@ None
 ***
 
 
-### 28. MobileViT Attention Usage
+### 28. MobileViT Attention
 
 #### 28.1. Paper
 
@@ -547,7 +547,7 @@ None
 ***
 
 
-### 29. ParNet Attention Usage
+### 29. ParNet Attention
 
 #### 29.1. Paper
 
@@ -561,7 +561,7 @@ None
 ***
 
 
-### 30. UFO Attention Usage
+### 30. UFO Attention
 
 #### 30.1. Paper
 
@@ -575,7 +575,7 @@ None
 
 -
 
-### 31. MobileViTv2 Attention Usage
+### 31. MobileViTv2 Attention
 
 #### 31.1. Paper
 
@@ -601,7 +601,7 @@ None
 - Pytorch implementation of [Patches Are All You Need?---ICLR2022 (Under Review)](https://openreview.net/forum?id=TVHS5Y4dNvM)
 
 
-### 1. ResNet Usage
+### 1. ResNet
 #### 1.1. Paper
 ["Deep Residual Learning for Image Recognition---CVPR2016 Best Paper"](https://arxiv.org/pdf/1512.03385.pdf)
 
@@ -612,7 +612,7 @@ None
 
 
 
-### 2. ResNeXt Usage
+### 2. ResNeXt
 #### 2.1. Paper
 
 ["Aggregated Residual Transformations for Deep Neural Networks---CVPR2017"](https://arxiv.org/abs/1611.05431v2)
@@ -623,7 +623,7 @@ None
 
 
 
-### 3. MobileViT Usage
+### 3. MobileViT
 #### 3.1. Paper
 
 [MobileViT: Light-weight, General-purpose, and Mobile-friendly Vision Transformer---ArXiv 2020.10.05](https://arxiv.org/abs/2103.02907)
@@ -633,7 +633,7 @@ None
 
 
 
-### 4. ConvMixer Usage
+### 4. ConvMixer
 #### 4.1. Paper
 [Patches Are All You Need?---ICLR2022 (Under Review)](https://openreview.net/forum?id=TVHS5Y4dNvM)
 #### 4.2. Overview
@@ -658,7 +658,7 @@ None
 
 - Pytorch implementation of ["Sparse MLP for Image Recognition: Is Self-Attention Really Necessary?---arXiv 2021.09.12"](https://arxiv.org/abs/2109.05422)
 
-### 1. RepMLP Usage
+### 1. RepMLP
 #### 1.1. Paper
 ["RepMLP: Re-parameterizing Convolutions into Fully-connected Layers for Image Recognition"](https://arxiv.org/pdf/2105.01883v1.pdf)
 
@@ -667,7 +667,7 @@ None
 
 
 
-### 2. MLP-Mixer Usage
+### 2. MLP-Mixer
 #### 2.1. Paper
 ["MLP-Mixer: An all-MLP Architecture for Vision"](https://arxiv.org/pdf/2105.01601.pdf)
 
@@ -677,7 +677,7 @@ None
 
 ***
 
-### 3. ResMLP Usage
+### 3. ResMLP
 #### 3.1. Paper
 ["ResMLP: Feedforward networks for image classification with data-efficient training"](https://arxiv.org/pdf/2105.03404.pdf)
 
@@ -688,7 +688,7 @@ None
 
 ***
 
-### 4. gMLP Usage
+### 4. gMLP
 #### 4.1. Paper
 ["Pay Attention to MLPs"](https://arxiv.org/abs/2105.08050)
 
@@ -699,7 +699,7 @@ None
 
 ***
 
-### 5. sMLP Usage
+### 5. sMLP
 #### 5.1. Paper
 ["Sparse MLP for Image Recognition: Is Self-Attention Really Necessary?"](https://arxiv.org/abs/2109.05422)
 
@@ -720,7 +720,7 @@ None
 
 ***
 
-### 1. RepVGG Usage
+### 1. RepVGG
 #### 1.1. Paper
 ["RepVGG: Making VGG-style ConvNets Great Again"](https://arxiv.org/abs/2101.03697)
 
@@ -733,7 +733,7 @@ None
 
 ***
 
-### 2. ACNet Usage
+### 2. ACNet
 #### 2.1. Paper
 ["ACNet: Strengthening the Kernel Skeletons for Powerful CNN via Asymmetric Convolution Blocks"](https://arxiv.org/abs/1908.03930)
 
@@ -746,7 +746,7 @@ None
 
 ***
 
-### 2. Diverse Branch Block Usage
+### 2. Diverse Branch Block
 #### 2.1. Paper
 ["Diverse Branch Block: Building a Convolution as an Inception-like Unit"](https://arxiv.org/abs/2103.13425)
 
@@ -768,7 +768,7 @@ None
 
 ***
 
-### 1. Depthwise Separable Convolution Usage
+### 1. Depthwise Separable Convolution
 #### 1.1. Paper
 ["MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications"](https://arxiv.org/abs/1704.04861)
 
@@ -778,7 +778,7 @@ None
 ***
 
 
-### 2. MBConv Usage
+### 2. MBConv
 #### 2.1. Paper
 ["Efficientnet: Rethinking attention_model scaling for convolutional neural networks"](http://proceedings.mlr.press/v97/tan19a.html)
 
@@ -789,7 +789,7 @@ None
 ***
 
 
-### 3. Involution Usage
+### 3. Involution
 #### 3.1. Paper
 ["Involution: Inverting the Inherence of Convolution for Visual Recognition"](https://arxiv.org/abs/2103.06255)
 
@@ -800,7 +800,7 @@ None
 ***
 
 
-### 4. DynamicConv Usage
+### 4. DynamicConv
 #### 4.1. Paper
 ["Dynamic Convolution: Attention over Convolution Kernels"](https://arxiv.org/abs/1912.03458)
 
@@ -811,7 +811,7 @@ None
 ***
 
 
-### 5. CondConv Usage
+### 5. CondConv
 #### 5.1. Paper
 ["CondConv: Conditionally Parameterized Convolutions for Efficient Inference"](https://arxiv.org/abs/1904.04971)
 
