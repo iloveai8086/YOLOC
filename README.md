@@ -70,8 +70,43 @@ python val.py --soft
 ```
 ______________________________________________________________________
 
-#### 🌟多种Attention注意力机制
-* **（Attention）**
+#### 🌟多种Attention注意力机制🚀🚀🚀
+
+具体不同注意力机制Paper以及结构图👉👉👉[点击链接🔗](https://github.com/Him-wen/awesome-yolo/blob/main/docs/model.md)  
+
+**Attention Series🚀🚀🚀**
+
+1. 🎈External Attention
+2. 🎈Self Attention
+3. 🎈Simplified Self Attention
+4. 🎈Squeeze-and-Excitation Attention
+5. 🎈SK Attention
+6. 🎈CBAM Attention
+7. 🎈BAM Attention
+8. 🎈ECA Attention
+9. 🎈DANet Attention
+10. 🎈Pyramid Split Attention (PSA)
+11. 🎈Efficient Multi-Head Self-Attention(EMSA)
+12. 🎈Shuffle Attention
+13. 🎈MUSE Attention
+14. 🎈SGE Attention
+15. 🎈A2 Attention
+16. 🎈AFT Attention
+17. 🎈Outlook Attention
+18. 🎈ViP Attention
+19. 🎈CoAtNet Attention
+20. 🎈HaloNet Attention
+21. 🎈Polarized Self-Attention
+22. 🎈CoTAttention
+23. 🎈Residual Attention
+24. 🎈S2 Attention
+25. 🎈GFNet Attention
+26. 🎈Triplet Attention
+27. 🎈Coordinate Attention
+28. 🎈MobileViT Attention
+29. 🎈ParNet Attention
+30. 🎈UFO Attention
+31. 🎈MobileViTv2 Attention
 ______________________________________________________________________
 
 
