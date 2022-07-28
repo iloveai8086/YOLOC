@@ -49,7 +49,10 @@ class SpatialAttention(nn.Module):
         res=res.expand_as(x)
         return res
 
-class BAM(nn.Module):
+
+
+
+class BAMBlock(nn.Module):
 
     def __init__(self, channel=512,reduction=16,dia_val=2):
         super().__init__()
@@ -83,7 +86,7 @@ class BAM(nn.Module):
 
 if __name__ == '__main__':
     input=torch.randn(50,512,7,7)
-    bam = BAM(channel=512,reduction=16,dia_val=2)
+    bam = BAMBlock(channel=512,reduction=16,dia_val=2)
     output=bam(input)
     print(output.shape)
 
