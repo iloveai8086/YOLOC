@@ -1,29 +1,39 @@
-## awesome-yolo🎈🎈🎈
+# YOLOC🎈🎈🎈
+
+## Introduction
+**YOLOC** is Combining different modules to build an different Object detection model.
 
 <div align=“center”>
 
-<img src='docs/image/logo.png'>
+<img src='docs/image/logo1.png'>
+
+**Combining** some modules and tricks to improve the YOLO detection model, the effect of using different datasets is inconsistent. Need to try and verify through specific experiments
 
 🚀**yolo系列v3、v4、v5、v6、v7、x、r**以及其他改进的网络结构 <img src='https://img.shields.io/github/stars/Him-wen/awesome-yolo?style=social'>
-#### awesome-yolo中支持的模块有：
+#### YOLOC中支持的模块有：
 
-- [x] 包含主流的 YOLOv3 模型网络结构中；
-- [x] 包含主流的 YOLOv4 模型网络结构中；
-- [x] 包含主流的 Scaled_YOLOv4 模型网络结构中；
-- [x] 包含主流的 YOLOv5 模型网络结构中；
-- [x] 包含主流的 YOLOv6 模型网络结构中；
-- [x] 包含主流的 YOLOv7 模型网络结构中；
-- [x] 包含主流的 YOLOX 模型网络结构中；
-- [x] 包含主流的 YOLOR 模型网络结构中；
-- [x] 包含transformer架构的backbone、neck、head；
-- [x] 包含改进的transformer系列的backbone、neck、head；
-- [x] 包含Attention系列的backbone、neck、head；
-- [x] 包含基于anchor-free和anchor-based的检测器；  
+- [x] 主流 🚀YOLOv3 模型网络结构；
+- [x] 主流 🚀YOLOv4 模型网络结构；
+- [x] 主流 🚀Scaled_YOLOv4 模型网络结构；
+- [x] 主流 🚀YOLOv5 模型网络结构；
+- [x] 主流 🚀YOLOv6 模型网络结构；
+- [x] 主流 🚀YOLOv7 模型网络结构；
+- [x] 主流 🚀YOLOX 模型网络结构；
+- [x] 主流 🚀YOLOR 模型网络结构；
+- [x] transformer架构的backbone、neck、head；
+- [x] 改进的transformer系列的backbone、neck、head；
+- [x] Attention系列的backbone、neck、head；
+- [x] 基于anchor-free和anchor-based的检测器；
+- [x] FPN、PANet、BiFPN等结构；
+- [x] CIoU、DIoU、GIoU、EIoU、SIoU等损失函数；
+- [x] NMS、Merge-NMS、Soft-NMS等NMS方法；
+- [x] SE、CBAM、ECA、BAM、DANet...[详细链接🔗](#🌟多种Attention注意力机制🚀🚀🚀) 等31种Attention注意力机制；
+- [x] SiLU、Hardswish、Mish、MemoryEfficientMish、FReLU、AconC、MetaAconC等激活函数；
 ...
 ...
 > 更新中
 
-## 🚀 可选择的YOLO模型组合
+## 🚀 可选择的YOLO组合
 #### 🌟损失函数
 * **CIoU（默认）**
 ```python
@@ -75,7 +85,6 @@ ______________________________________________________________________
 具体不同注意力机制Paper以及结构图👉👉👉[点击链接🔗](https://github.com/Him-wen/awesome-yolo/blob/main/docs/model.md)  
 
 **Attention Series🚀🚀🚀**
-
 1. 🎈External Attention
 2. 🎈Self Attention
 3. 🎈Simplified Self Attention
@@ -110,6 +119,10 @@ ______________________________________________________________________
 ______________________________________________________________________
 
 #### 🌟激活函数
+<div align='center'>
+<img src='docs/image/Activation.png' width="300px">
+</div>
+
 * **SiLU**
 
 ```python
