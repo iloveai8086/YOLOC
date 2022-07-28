@@ -291,13 +291,13 @@ def parse_model(d, ch):  # model_dict, input_channels(3)
         CoordAtt, CrossConv, C3, CTR3, Involution, C3SPP, C3Ghost, CARAFE, nn.ConvTranspose2d, DWConvTranspose2d, C3x,
         SPPCSPC, GhostSPPCSPC, BottleneckCSPA, BottleneckCSPB, BottleneckCSPC,
         RepConv, RepConv_OREPA, RepBottleneck, RepBottleneckCSPA, RepBottleneckCSPB, RepBottleneckCSPC,
-        Res, ResCSPA, ResCSPB, ResCSPC,
+        Res, ResCSPA, ResCSPB, ResCSPC, ConvSig,
         RepRes, RepResCSPA, RepResCSPB, RepResCSPC,
         ResX, ResXCSPA, ResXCSPB, ResXCSPC,
         RepResX, RepResXCSPA, RepResXCSPB, RepResXCSPC, Ghost, GhostCSPA, GhostCSPB, GhostCSPC,
         SwinTransformerBlock, STCSPA, STCSPB, STCSPC,
         SwinTransformer2Block, ST2CSPA, ST2CSPB, ST2CSPC,
-        conv_bn_relu_maxpool, Shuffle_Block, RepVGGBlock, CBH, LC_Block, Dense, DWConvblock):
+        conv_bn_relu_maxpool, Shuffle_Block, RepVGGBlock, CBH, LC_Block, Dense, DWConvblock, BottleneckCSP2, DWT, BottleneckCSP2SAM, VoVCSP):
             c1, c2 = ch[f], args[0]
             if c2 != no:  # if not output
                 c2 = make_divisible(c2 * gw, 8)
@@ -306,13 +306,13 @@ def parse_model(d, ch):  # model_dict, input_channels(3)
             if m in [BottleneckCSP, C3, C3TR, CTR3, C3Ghost, C3x, SPPCSPC, GhostSPPCSPC,
                      BottleneckCSPA, BottleneckCSPB, BottleneckCSPC,
                      RepBottleneckCSPA, RepBottleneckCSPB, RepBottleneckCSPC,
-                     ResCSPA, ResCSPB, ResCSPC,
+                     ResCSPA, ResCSPB, ConvSig, ResCSPC,
                      RepResCSPA, RepResCSPB, RepResCSPC,
                      ResXCSPA, ResXCSPB, ResXCSPC,
                      RepResXCSPA, RepResXCSPB, RepResXCSPC,
                      GhostCSPA, GhostCSPB, GhostCSPC,
                      STCSPA, STCSPB, STCSPC,
-                     ST2CSPA, ST2CSPB, ST2CSPC]:
+                     ST2CSPA, ST2CSPB, ST2CSPC, BottleneckCSP2, DWT, BottleneckCSP2SAM, VoVCSP]:
                 args.insert(2, n)  # number of repeats
                 n = 1
         elif m is nn.BatchNorm2d:
