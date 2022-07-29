@@ -42,6 +42,7 @@
 * ✅ yolov4m-mish
 * ✅ yolov4l-mish
 * ✅ yolov4x-mish
+* ✅ yolov4-csp
 * ✅ csp-p6-mish
 * ✅ csp-p7-mish
 
