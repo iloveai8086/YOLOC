@@ -211,7 +211,7 @@ class ConfusionMatrix:
         for i in range(self.nc + 1):
             print(' '.join(map(str, self.matrix[i])))
 
-
+# yolov5-v6.1代码
 def bbox_iou(box1, box2, xywh=True, GIoU=False, DIoU=False, CIoU=False, EIoU=False, SIoU=False, eps=1e-7):
     # Returns Intersection over Union (IoU) of box1(1,4) to box2(n,4)
 
@@ -278,6 +278,7 @@ def bbox_iou(box1, box2, xywh=True, GIoU=False, DIoU=False, CIoU=False, EIoU=Fal
             return iou - (c_area - union) / c_area  # GIoU
     return iou  # IoU
 
+# v7采用的版本为v6.0
 def bbox_iou_v6(box1, box2, x1y1x2y2=True, GIoU=False, DIoU=False, CIoU=False, eps=1e-7):
     # Returns the IoU of box1 to box2. box1 is 4, box2 is nx4
     # yolov5_v6.0

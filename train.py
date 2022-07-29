@@ -407,7 +407,7 @@ def train(hyp, opt, device, callbacks):  # hyp is path/to/hyp.yaml or hyp dictio
             mloss = torch.zeros(4, device=device)  # mean losses
             LOGGER.info(('\n' + '%10s' * 8) % ('Epoch', 'gpu_mem', 'iou', 'l1', 'obj', 'cls', 'labels', 'img_size'))
         else:
-            mloss = torch.zeros(3, device=device)  # mean losses
+            mloss = torch.zeros(4, device=device)  # mean losses
             LOGGER.info(('\n' + '%10s' * 7) % ('Epoch', 'gpu_mem', 'box', 'obj', 'cls', 'labels', 'img_size'))
         if RANK != -1:
             train_loader.sampler.set_epoch(epoch)
@@ -446,7 +446,8 @@ def train(hyp, opt, device, callbacks):  # hyp is path/to/hyp.yaml or hyp dictio
                     if use_aux:
                         loss, loss_items = compute_loss(pred, targets.to(device), imgs)  # init loss class
                     else:
-                        loss, loss_items = compute_loss(pred, targets.to(device))
+                        # loss, loss_items = compute_loss(pred, targets.to(device))
+                        loss, loss_items = compute_loss(pred, targets.to(device), imgs)
                 elif mode == 'yolo':
                     loss, loss_items = compute_loss(pred, targets.to(device))  # init loss class
                 elif mode == 'yolox':
@@ -477,6 +478,8 @@ def train(hyp, opt, device, callbacks):  # hyp is path/to/hyp.yaml or hyp dictio
 
             # Log
             if RANK in {-1, 0}:
+                # mloss * i: tensor([0., 0., 0.]) loss_items:tensor([0.08079, 0.01247, 0.10320, 0.19646])
+                # log:通道未匹配 mloss init -> 4 RuntimeError: The size of tensor a (3) must match the size of tensor b (4) at non-singleton dimension 0
                 mloss = (mloss * i + loss_items) / (i + 1)  # update mean losses
                 mem = f'{torch.cuda.memory_reserved() / 1E9 if torch.cuda.is_available() else 0:.3g}G'  # (GB)
                 mloss_count = mloss.shape[0]
@@ -507,6 +510,7 @@ def train(hyp, opt, device, callbacks):  # hyp is path/to/hyp.yaml or hyp dictio
                                            plots=False,
                                            callbacks=callbacks,
                                            compute_loss=compute_loss,
+                                           imgs=imgs,
                                            half=not opt.swin_float)
 
             # Update best mAP
@@ -561,7 +565,6 @@ def train(hyp, opt, device, callbacks):  # hyp is path/to/hyp.yaml or hyp dictio
                                             verbose=True,
                                             plots=True,
                                             callbacks=callbacks,
-                                            compute_loss=compute_loss,
                                             half=not opt.swin_float)  # val best model with plots
                     if is_coco:
                         callbacks.run('on_fit_epoch_end', list(mloss) + list(results) + lr, epoch, best_fitness, fi)

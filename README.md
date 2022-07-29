@@ -103,12 +103,17 @@
 
 ### 🎈YOLOX
 * ✅ yolox n
-* ✅ yolox t
+* ✅ yolox tiny
 * ✅ yolox s
 * ✅ yolox m
 * ✅ yolox l
 * ✅ yolox x
 * ✅ yolox xs
+
+### 🎈YOLOv7
+* ✅ yolov7
+* ✅ yolov7-tiny
+* ✅ yolov7-tiny-silu
 
 
 
