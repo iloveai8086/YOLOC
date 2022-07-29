@@ -36,7 +36,13 @@
 ...
 > 更新中
 
-## 内置网络模型配置
+## 内置网络模型配置支持🚀
+
+### 🎈YOLOv3
+* ✅ yolov3-spp
+* ✅ yolov3-tiny
+* ✅ yolov3
+
 ### 🎈YOLOv4
 * ✅ yolov4s-mish 
 * ✅ yolov4m-mish
