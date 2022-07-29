@@ -101,6 +101,16 @@
 ### 🎈YOLOv6
 * ✅ yolov6s
 
+### 🎈YOLOX
+* ✅ yolox n
+* ✅ yolox t
+* ✅ yolox s
+* ✅ yolox m
+* ✅ yolox l
+* ✅ yolox x
+* ✅ yolox xs
+
+
 
 
 ## 🚀 可选择的YOLO组合

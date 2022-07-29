@@ -576,7 +576,7 @@ def parse_opt(known=False):
     parser = argparse.ArgumentParser()
     # Loss
     parser.add_argument('--loss_category', default='CIoU', help='Use different loss functions') 
-    parser.add_argument('--mode', type=str, default='yolov6', help='yolo   :[yolov3, yolov4, scaled_yolov4, yolov5, yolor, yolov5-lite]'
+    parser.add_argument('--mode', type=str, default='yolov7', help='yolo   :[yolov3, yolov4, scaled_yolov4, yolov5, yolor, yolo_combining]'
                                                                   'yolov7 :[yolov7, ]'
                                                                   'yolox  :[yolox, yolox-lite]'
                                                                   'yolov6  :[yolov6, ]')
