@@ -406,8 +406,11 @@ def train(hyp, opt, device, callbacks):  # hyp is path/to/hyp.yaml or hyp dictio
         elif mode == 'yolov6':
             mloss = torch.zeros(4, device=device)  # mean losses
             LOGGER.info(('\n' + '%10s' * 8) % ('Epoch', 'gpu_mem', 'iou', 'l1', 'obj', 'cls', 'labels', 'img_size'))
-        else:
+        elif mode == 'yolov7':
             mloss = torch.zeros(4, device=device)  # mean losses
+            LOGGER.info(('\n' + '%10s' * 7) % ('Epoch', 'gpu_mem', 'box', 'obj', 'cls', 'labels', 'img_size'))
+        else:
+            mloss = torch.zeros(3, device=device)  # mean losses
             LOGGER.info(('\n' + '%10s' * 7) % ('Epoch', 'gpu_mem', 'box', 'obj', 'cls', 'labels', 'img_size'))
         if RANK != -1:
             train_loader.sampler.set_epoch(epoch)
@@ -510,7 +513,6 @@ def train(hyp, opt, device, callbacks):  # hyp is path/to/hyp.yaml or hyp dictio
                                            plots=False,
                                            callbacks=callbacks,
                                            compute_loss=compute_loss,
-                                           imgs=imgs,
                                            half=not opt.swin_float)
 
             # Update best mAP
@@ -579,7 +581,7 @@ def parse_opt(known=False):
     parser = argparse.ArgumentParser()
     # Loss
     parser.add_argument('--loss_category', default='CIoU', help='Use different loss functions') 
-    parser.add_argument('--mode', type=str, default='yolov7', help='yolo   :[yolov3, yolov4, scaled_yolov4, yolov5, yolor, yolo_combining]'
+    parser.add_argument('--mode', type=str, default='yolo', help='yolo   :[yolov3, yolov4, scaled_yolov4, yolov5, yolor, yolo_combining]'
                                                                   'yolov7 :[yolov7, ]'
                                                                   'yolox  :[yolox, yolox-lite]'
                                                                   'yolov6  :[yolov6, ]')

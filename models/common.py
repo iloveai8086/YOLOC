@@ -762,22 +762,35 @@ class CrossConv(nn.Module):
         return x + self.cv2(self.cv1(x)) if self.add else self.cv2(self.cv1(x))
 
 
+# class C3(nn.Module):
+#     # CSP Bottleneck with 3 convolutions 
+#     def __init__(self, c1, c2, n=1, Involution=False, shortcut=True, g=1,
+#                  e=0.5):  # ch_in, ch_out, number, shortcut, groups, expansion
+#         super(C3, self).__init__()
+#         c_ = int(c2 * e)  # hidden channels
+#         self.cv1 = Conv(c1, c_, 1, 1)
+#         self.cv2 = Conv(c1, c_, 1, 1)
+#         self.cv3 = Conv(2 * c_, c2, 1)  # act=FReLU(c2)
+#         self.m = nn.Sequential(*(
+#         (InvolutionBottleneck(c_, c_, shortcut, g, e=1.0) if (Involution) else Bottleneck(c_, c_, shortcut, g, e=1.0))
+#         for _ in range(n)))
+
+#     def forward(self, x):
+#         return self.cv3(torch.cat((self.m(self.cv1(x)), self.cv2(x)), 1))
+
 class C3(nn.Module):
-    # CSP Bottleneck with 3 convolutions 
-    def __init__(self, c1, c2, n=1, Involution=False, shortcut=True, g=1,
-                 e=0.5):  # ch_in, ch_out, number, shortcut, groups, expansion
-        super(C3, self).__init__()
+    # CSP Bottleneck with 3 convolutions
+    def __init__(self, c1, c2, n=1, shortcut=True, g=1, e=0.5):  # ch_in, ch_out, number, shortcut, groups, expansion
+        super().__init__()
         c_ = int(c2 * e)  # hidden channels
         self.cv1 = Conv(c1, c_, 1, 1)
         self.cv2 = Conv(c1, c_, 1, 1)
         self.cv3 = Conv(2 * c_, c2, 1)  # act=FReLU(c2)
-        self.m = nn.Sequential(*(
-        (InvolutionBottleneck(c_, c_, shortcut, g, e=1.0) if (Involution) else Bottleneck(c_, c_, shortcut, g, e=1.0))
-        for _ in range(n)))
+        self.m = nn.Sequential(*[Bottleneck(c_, c_, shortcut, g, e=1.0) for _ in range(n)])
+        # self.m = nn.Sequential(*[CrossConv(c_, c_, 3, 1, g, 1.0, shortcut) for _ in range(n)])
 
     def forward(self, x):
-        return self.cv3(torch.cat((self.m(self.cv1(x)), self.cv2(x)), 1))
-
+        return self.cv3(torch.cat((self.m(self.cv1(x)), self.cv2(x)), dim=1))
 
 class C3x(C3):
     # C3 module with cross-convolutions
@@ -3829,7 +3842,9 @@ class RepBlock(nn.Module):
     def __init__(self, in_channels, out_channels, n=1):
         super().__init__()
         self.conv1 = RepVGGBlock(in_channels, out_channels)
+        # 和yolov6官方的区别是这里没有用一个RepVGGBlock
         self.block = nn.Sequential(*(RepVGGBlock(out_channels, out_channels) for _ in range(n - 1))) if n > 1 else None
+        # self.block = nn.Sequential(*[RepVGGBlock(out_channels, out_channels) for _ in range(n)])
 
     def forward(self, x):
         x = self.conv1(x)
