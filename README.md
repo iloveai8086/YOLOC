@@ -52,6 +52,56 @@
 * ✅ csp-p6-mish
 * ✅ csp-p7-mish
 
+### 🎈YOLOv5
+* ✅ yolov5n
+* ✅ yolov5s
+* ✅ yolov5m
+* ✅ yolov5l
+* ✅ yolov5x
+
+* ❎ yolov5-bifpn 
+* ✅ yolov5-fpn
+* ✅ yolov5-p2
+* ✅ yolov5-p6
+* ✅ yolov5-p7
+* ✅ yolov5-panet
+* ✅ yolov5l6
+* ✅ yolov5m6
+* ✅ yolov5n6
+* ✅ yolov5s6
+* ✅ yolov5x6
+* ❎ yolov5s-ghost
+* ❎ yolov5-transformer
+
+### 🎈yolo_combining
+* ✅ yolov5s_cbam
+* ✅ yolov5Lite-s.yaml
+* ✅ yolov5Lite-g.yaml
+* ✅ yolov5Lite-c.yaml
+* ✅ yolov5Lite-e.yaml
+...
+
+### 🎈Scaled_YOLOv4
+* ✅ yolov4-p5
+* ✅ yolov4-p6
+* ✅ yolov4-p7
+
+### 🎈YOLOR
+* ✅ yolor-csp
+* ✅ yolor-csp-x
+*  r50-csp
+*  x50-csp
+*  yolor-d6
+*  yolor-e6
+*  yolor-p6
+*  yolor-w6
+*  yolor-ssss-dwt
+*  yolor-ssss-s2d
+
+### 🎈YOLOv6
+* ✅ yolov6s
+
+
 
 ## 🚀 可选择的YOLO组合
 #### 🌟损失函数
