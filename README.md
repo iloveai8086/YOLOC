@@ -1,19 +1,15 @@
-# YOLOC🎈🎈🎈
+# 🎈🎈🎈YOLOC
 
 ## Introduction
 
 🚀**YOLOC** is Combining different modules to build an different Object detection model.
 <div align=“center”>
+
 <div align='center'>
-    <img src='docs/image/wordclouds.png' width='300px'>
+    <img src='docs/image/logo1.png' width='700px'>
 </div>
 
 **🌟Combining** some modules and tricks to improve the YOLO detection model, the effect of using different datasets is inconsistent. Need to try and verify through specific experiments
-
-<div align='center'>
-    <img src='docs/image/logo1.png' width='300px'>
-</div>
-
 
 #### YOLOC中支持的模块有：
 
