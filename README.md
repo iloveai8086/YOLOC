@@ -42,6 +42,7 @@
 * ✅ yolov3-spp
 * ✅ yolov3-tiny
 * ✅ yolov3
+...
 
 ### 🎈YOLOv4
 * ✅ yolov4s-mish 
@@ -51,6 +52,7 @@
 * ✅ yolov4-csp
 * ✅ csp-p6-mish
 * ✅ csp-p7-mish
+...
 
 ### 🎈YOLOv5
 * ✅ yolov5n
@@ -59,7 +61,7 @@
 * ✅ yolov5l
 * ✅ yolov5x
 
-* ❎ yolov5-bifpn 
+* ✅ yolov5-bifpn 
 * ✅ yolov5-fpn
 * ✅ yolov5-p2
 * ✅ yolov5-p6
@@ -70,8 +72,9 @@
 * ✅ yolov5n6
 * ✅ yolov5s6
 * ✅ yolov5x6
-* ❎ yolov5s-ghost
-* ❎ yolov5-transformer
+* ✅ yolov5s-ghost
+* ✅ yolov5-transformer
+...
 
 ### 🎈yolo_combining
 * ✅ yolov5s_cbam
@@ -85,21 +88,24 @@
 * ✅ yolov4-p5
 * ✅ yolov4-p6
 * ✅ yolov4-p7
+...
 
 ### 🎈YOLOR
 * ✅ yolor-csp
 * ✅ yolor-csp-x
-*  r50-csp
-*  x50-csp
-*  yolor-d6
-*  yolor-e6
-*  yolor-p6
-*  yolor-w6
-*  yolor-ssss-dwt
-*  yolor-ssss-s2d
+* ✅ r50-csp
+* ✅ x50-csp
+* ✅ yolor-d6
+* ✅ yolor-e6
+* ✅ yolor-p6
+* ✅ yolor-w6
+* ✅ yolor-ssss-dwt
+* ✅ yolor-ssss-s2d
+...
 
 ### 🎈YOLOv6
 * ✅ yolov6s
+...
 
 ### 🎈YOLOX
 * ✅ yolox n
@@ -109,11 +115,14 @@
 * ✅ yolox l
 * ✅ yolox x
 * ✅ yolox xs
+...
 
 ### 🎈YOLOv7
 * ✅ yolov7
 * ✅ yolov7-tiny
 * ✅ yolov7-tiny-silu
+* ✅ yolov7x
+...
 
 
 
