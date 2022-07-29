@@ -1,15 +1,18 @@
 # YOLOC🎈🎈🎈
 
 ## Introduction
-**YOLOC** is Combining different modules to build an different Object detection model.
 
+🚀**YOLOC** is Combining different modules to build an different Object detection model.
 <div align=“center”>
+<div align='center'>
+    <img src='docs/image/wordclouds.png' width='300px'>
+</div>
 
-<img src='docs/image/logo1.png'>
+**🌟Combining** some modules and tricks to improve the YOLO detection model, the effect of using different datasets is inconsistent. Need to try and verify through specific experiments
 
-**Combining** some modules and tricks to improve the YOLO detection model, the effect of using different datasets is inconsistent. Need to try and verify through specific experiments
-
-🚀**yolo系列v3、v4、v5、v6、v7、x、r**以及其他改进的网络结构 <img src='https://img.shields.io/github/stars/Him-wen/YOLOC?style=social'>
+<div align='center'>
+    <img src='docs/image/logo1.png' width='300px'>
+</div>
 #### YOLOC中支持的模块有：
 
 - [x] 主流 🚀YOLOv3 模型网络结构；
@@ -31,9 +34,10 @@
 - [x] 🍉SiLU、Hardswish、Mish、MemoryEfficientMish、FReLU、AconC、MetaAconC等激活函数；
 - [x] 🍉Conv, GhostConv, Bottleneck, GhostBottleneck, SPP, SPPF, DWConv, MixConv2d, Focus, CrossConv, BottleneckCSP, CBAM, ResBlock_CBAM, CoordAtt, CrossConv, C3, CTR3, Involution, C3SPP, C3Ghost, CARAFE, nn.ConvTranspose2d, DWConvTranspose2d, C3x, SPPCSPC, GhostSPPCSPC, BottleneckCSPA, BottleneckCSPB, ConvSig, BottleneckCSPC, RepConv, RepConv_OREPA, RepBottleneck, RepBottleneckCSPA, RepBottleneckCSPB, RepBottleneckCSPC, Res, ResCSPA, ResCSPB, ResCSPC, RepRes, RepResCSPA, RepResCSPB, RepResCSPC, ResX, ResXCSPA, ResXCSPB, ResXCSPC, RepResX, RepResXCSPA, RepResXCSPB, RepResXCSPC, Ghost, GhostCSPA, GhostCSPB, GhostCSPC, SwinTransformerBlock, STCSPA, STCSPB, STCSPC, SwinTransformer2Block, ST2CSPA, ST2CSPB, ST2CSPC, conv_bn_relu_maxpool, Shuffle_Block, RepVGGBlock, CBH, LC_Block, Dense, DWConvblock, BottleneckCSP2, DWT, BottleneckCSP2SAM, VoVCSP等网络模型组合模块
 代码 **./models/common.py文件** 内搜索🔍👉[对应模块链接🔗](https://github.com/Him-wen/YOLOC/blob/main/models/common.py)
+...
+...
 
-...
-...
+- 🚀**yolo系列v3、v4、v5、v6、v7、x、r**以及其他改进的网络结构 <img src='https://img.shields.io/github/stars/Him-wen/YOLOC?style=social'>
 > 更新中
 
 ## 内置网络模型配置支持🚀
@@ -105,6 +109,10 @@
 
 ### 🎈YOLOv6
 * ✅ yolov6s
+*  yolov6n
+*  yolov6m
+*  yolov6l
+*  yolov6x
 ...
 
 ### 🎈YOLOX
