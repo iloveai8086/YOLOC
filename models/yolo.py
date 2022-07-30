@@ -178,8 +178,7 @@ class Model(nn.Module):
         return y
 
     def _profile_one_layer(self, m, x, dt):
-        c = isinstance(m, Detect) or isinstance(m, ASFF_Detect) or isinstance(m,
-                                                                              Decoupled_Detect)  # is final layer, copy input as inplace fix
+        c = isinstance(m, Detect) or isinstance(m, ASFF_Detect) or isinstance(m, Decoupled_Detect)  # is final layer, copy input as inplace fix
         o = thop.profile(m, inputs=(x.copy() if c else x,), verbose=False)[0] / 1E9 * 2 if thop else 0  # FLOPs
         t = time_sync()
         for _ in range(10):
@@ -315,6 +314,18 @@ def parse_model(d, ch):  # model_dict, input_channels(3)
                      ST2CSPA, ST2CSPB, ST2CSPC, BottleneckCSP2, DWT, BottleneckCSP2SAM, VoVCSP, SPPCSP, DownC]:
                 args.insert(2, n)  # number of repeats
                 n = 1
+        elif m is RepBlock:
+            args.insert(2, n)
+            n = 1
+        # elif m is [RepBlock, RepVGGBlock, SimSPPF, SimConv]:
+        #     c1, c2 = ch[f], args[0]
+        #     if c2 != no:  # if not output
+        #         c2 = make_divisible(c2 * gw, 8)
+        #     args = [c1, c2, *args[1:]]
+
+        #     if m in RepBlock:
+        #         args.insert(2, n)
+        #         n = 1
         elif m is nn.BatchNorm2d:
             args = [ch[f]]
         elif m is Concat:
