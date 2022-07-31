@@ -40,20 +40,29 @@
 
 ## 内置网络模型配置支持🚀
 
-### 🎈YOLOv3
-* ✅ yolov3-spp
-* ✅ yolov3-tiny
-* ✅ yolov3
+### 🎈YOLOv6
+* ✅ yolov6s
+* ✅ yolov6n
+* ✅ yolov6m
+* ✅ yolov6l
+* ✅ yolov6x
 ...
 
-### 🎈YOLOv4
-* ✅ yolov4s-mish 
-* ✅ yolov4m-mish
-* ✅ yolov4l-mish
-* ✅ yolov4x-mish
-* ✅ yolov4-csp
-* ✅ csp-p6-mish
-* ✅ csp-p7-mish
+### 🎈YOLOX
+* ✅ yolox n
+* ✅ yolox tiny
+* ✅ yolox s
+* ✅ yolox m
+* ✅ yolox l
+* ✅ yolox x
+* ✅ yolox xs
+...
+
+### 🎈YOLOv7
+* ✅ yolov7
+* ✅ yolov7-tiny
+* ✅ yolov7-tiny-silu
+* ✅ yolov7x
 ...
 
 ### 🎈YOLOv5
@@ -63,6 +72,12 @@
 * ✅ yolov5l
 * ✅ yolov5x
 
+### 🎈yolo_combining
+* ✅ yolov5s_cbam
+* ✅ yolov5Lite-s.yaml
+* ✅ yolov5Lite-g.yaml
+* ✅ yolov5Lite-c.yaml
+* ✅ yolov5Lite-e.yaml
 * ✅ yolov5-bifpn 
 * ✅ yolov5-fpn
 * ✅ yolov5-p2
@@ -76,14 +91,8 @@
 * ✅ yolov5x6
 * ✅ yolov5s-ghost
 * ✅ yolov5-transformer
+更多配置请查看 **./configs/yolo_combining** 文件
 ...
-
-### 🎈yolo_combining
-* ✅ yolov5s_cbam
-* ✅ yolov5Lite-s.yaml
-* ✅ yolov5Lite-g.yaml
-* ✅ yolov5Lite-c.yaml
-* ✅ yolov5Lite-e.yaml
 ...
 
 ### 🎈Scaled_YOLOv4
@@ -105,32 +114,21 @@
 * ✅ yolor-ssss-s2d
 ...
 
-### 🎈YOLOv6
-* ✅ yolov6s
-*  yolov6n
-*  yolov6m
-*  yolov6l
-*  yolov6x
+### 🎈YOLOv3
+* ✅ yolov3-spp
+* ✅ yolov3-tiny
+* ✅ yolov3
 ...
 
-### 🎈YOLOX
-* ✅ yolox n
-* ✅ yolox tiny
-* ✅ yolox s
-* ✅ yolox m
-* ✅ yolox l
-* ✅ yolox x
-* ✅ yolox xs
+### 🎈YOLOv4
+* ✅ yolov4s-mish 
+* ✅ yolov4m-mish
+* ✅ yolov4l-mish
+* ✅ yolov4x-mish
+* ✅ yolov4-csp
+* ✅ csp-p6-mish
+* ✅ csp-p7-mish
 ...
-
-### 🎈YOLOv7
-* ✅ yolov7
-* ✅ yolov7-tiny
-* ✅ yolov7-tiny-silu
-* ✅ yolov7x
-...
-
-
 
 
 ## 🚀 可选择的YOLO组合
