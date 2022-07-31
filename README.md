@@ -21,6 +21,7 @@
 - [x] 主流 🚀YOLOv7 模型网络结构；
 - [x] 主流 🚀YOLOX 模型网络结构；
 - [x] 主流 🚀YOLOR 模型网络结构；
+- [x]  🚀PicoDet 模型网络结构；
 - [x] transformer架构的backbone、neck、head；
 - [x] 改进的transformer系列的backbone、neck、head；
 - [x] Attention系列的backbone、neck、head；
@@ -130,6 +131,12 @@
 * ✅ csp-p7-mish
 ...
 
+### 🎈PicoDet
+* ✅ PicoDet-l
+* ✅ PicoDet-m
+* ✅ PicoDet-s
+* ✅ PicoDet-x
+...
 
 ## 🚀 可选择的YOLO组合
 #### 🌟损失函数
